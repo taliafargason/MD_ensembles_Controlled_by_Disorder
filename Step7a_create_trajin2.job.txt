@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --job-name=trajin
+#SBATCH --error=trajin_.err
+#SBATCH --output=trajin_.out
+#SBATCH --ntasks=2
+#SBATCH --time=2:00:00
+#SBATCH --mem-per-cpu=10240
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+module load Anaconda3
+source activate Talias_modules
+python3 create_trajin_files3.py

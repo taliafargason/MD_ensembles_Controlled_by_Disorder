@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --partition=express
+#SBATCH --job-name=calcPRE_test1
+#SBATCH --error=calcPRE_test1.err
+#SBATCH --output=calcPRE_test1.out
+#SBATCH --ntasks=10
+#SBATCH --time=2:00:00
+#SBATCH --mem-per-cpu=2G
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+source ~/.bashrc
+module load Anaconda3
+source activate Talias_modules
+
+python3 OP1_to_O1P.py

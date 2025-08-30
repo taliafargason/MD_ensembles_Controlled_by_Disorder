@@ -1,0 +1,25 @@
+Equilibration of the whole system at 310 K for 160 ns with shake at constant pressure
+ &cntrl
+  nmropt = 0,
+  ntx = 5, irest = 0,
+  ntpr = 5000, ntwx = 5000, ntwv = 5000, ntwe = 5000,
+  ntwr = 5000,
+
+  iwrap = 1,
+  ntf = 2, ntb = 2, ntp = 1, pres0 = 1.0,
+  cut = 10.0, nsnb = 20,
+
+  ibelly = 0, ntr = 0,
+
+  imin = 0,
+  nstlim = 50000000,
+  nscm = 500,
+  t = 0.0, dt = 0.002,
+
+  temp0 = 310.0, tempi = 310.0,
+  ntt = 1,
+  vrand = 0,
+  vlimit = 15.0,
+
+  ntc = 2,
+ &end

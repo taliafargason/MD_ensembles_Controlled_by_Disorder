@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --partition=express
+#SBATCH --job-name=add_water-Min
+#SBATCH --error=add_water-Min.err
+#SBATCH --output=add_water-Min.out
+#SBATCH --ntasks=10
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=10G
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+module purge
+module load DefaultModules
+module load Amber/20.11-foss-2020b-AmberTools-21.3
+
+tleap -f tleap2_add_waters.in >tleap2_add_waters.out

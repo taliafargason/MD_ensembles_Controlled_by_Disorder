@@ -1,0 +1,24 @@
+source leaprc.protein.ff14SB
+source leaprc.RNA.OL3
+source leaprc.phosaa14SB
+source leaprc.water.tip3p
+
+protein1 = loadpdb modified_hyper_SRSF1_unphos_U170k_startd.pdb
+setbox protein1 centers
+check protein1
+saveamberparm protein1 SRSF1_1.prmtop SRSF1_1.inpcrd
+savepdb protein1 SRSF1_new_1.pdb
+
+protein2 = loadpdb modified_hyper_phos_start_SRSF1_U170k.pdb
+setbox protein2 centers
+check protein2
+saveamberparm protein2 SRSF1_2.prmtop SRSF1_2.inpcrd
+savepdb protein2 SRSF1_new_2.pdb
+
+protein3 = loadpdb modified_starting_hypoSRSF1_unphosU170k.pdb
+setbox protein3 centers
+check protein3
+saveamberparm protein3 SRSF1_3.prmtop SRSF1_3.inpcrd
+savepdb protein3 SRSF1_new_3.pdb
+
+quit

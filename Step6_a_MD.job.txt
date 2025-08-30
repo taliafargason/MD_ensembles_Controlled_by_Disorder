@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --partition=express
+#SBATCH --job-name=SRSF1-Prot-Prep
+#SBATCH --error=SRSF1-Prot-Prep.err
+#SBATCH --output=SRSF1-Prot-Prep.out
+#SBATCH --ntasks=1
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=1024
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+for i in {1..30}
+do
+    #cp SRSF1-SolvI_${i}.prmtop MD_${i}
+    #cp SRSF1-eq-310K_${i}.rst MD_${i}
+    cp md.in MD_${i}
+    cp ext.in MD_${i}
+    #cp SRSF1_SolvI_CMAP_${i}.prmtop MD_${i}
+    #cd MD_${i}
+    #sbatch md_${i}.job
+    #cd ..
+done

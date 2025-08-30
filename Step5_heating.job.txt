@@ -1,0 +1,62 @@
+#!/bin/bash
+#SBATCH --partition=pascalnodes
+#SBATCH --job-name=test_CUDA_heating
+#SBATCH --error=test_CUDA_heating.err
+#SBATCH --output=test_CUDA_heating.out
+#SBATCH --gres=gpu:1
+#SBATCH --time=12:00:00
+#SBATCH --mem-per-cpu=5G
+#SBATCH --no-requeue
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+
+module reset
+module load OpenMPI/4.1.5-GCC-12.3.0 
+module load Amber/20.11-fosscuda-2020b-AmberTools-21.3 
+module load CUDA/11.6.0
+
+for i in {1..30}
+do
+  cat <<EOT > md_${i}.job
+#!/bin/bash
+#SBATCH --partition=amperenodes
+#SBATCH --job-name=md_${i}_SRSF1
+#SBATCH --error=md_${i}_SRSF1.err
+#SBATCH --output=md_${i}_SRSF1.out
+#SBATCH --gres=gpu:1
+#SBATCH --time=12:00:00
+#SBATCH --mem-per-cpu=5G
+#SBATCH --no-requeue
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+module reset
+module load OpenMPI/4.1.5-GCC-12.3.0
+module load Amber/20.11-fosscuda-2020b-AmberTools-21.3
+module load CUDA/11.6.0
+
+ambpdb -p SRSF1-SolvI_${i}.prmtop -c SRSF1-eq-310K_${i}.rst > SRSF1-eq-310K_${i}.pdb
+pmemd.cuda -O -i md.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-310K_${i}.rst -o md_${i}.out -r SRSF1-md_${i}.rst -x SRSF1-md_${i}.mdcrd -inf SRSF1-md_${i}.mdinfo
+ambpdb -p SRSF1-SolvI_${i}.prmtop -c SRSF1-md_${i}.rst > SRSF1-md_${i}.pdb
+EOT
+done
+
+
+for ((i=1;i<=30;i++));do
+	pmemd.cuda -O -i eq-50K.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-SolvI_${i}.rst -o eq-50K_${i}.out -r SRSF1-eq-50K_${i}.rst -x SRSF1-eq-50K_${i}.mdcrd -inf SRSF1-eq-50K_${i}.mdinfo
+	pmemd.cuda -O -i eq-100K.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-50K_${i}.rst -o eq-100K_${i}.out -r SRSF1-eq-100K_${i}.rst -x SRSF1-eq-100K_${i}.mdcrd -inf SRSF1-eq-100K_${i}.mdinfo
+	pmemd.cuda -O -i eq-150K.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-100K_${i}.rst -o eq-150K_${i}.out -r SRSF1-eq-150K_${i}.rst -x SRSF1-eq-150K_${i}.mdcrd -inf SRSF1-eq-150K_${i}.mdinfo
+	pmemd.cuda -O -i eq-200K.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-150K_${i}.rst -o eq-200K_${i}.out -r SRSF1-eq-200K_${i}.rst -x SRSF1-eq-200K_${i}.mdcrd -inf SRSF1-eq-200K_${i}.mdinfo
+	pmemd.cuda -O -i eq-250K.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-200K_${i}.rst -o eq-250K_${i}.out -r SRSF1-eq-250K_${i}.rst -x SRSF1-eq-250K_${i}.mdcrd -inf SRSF1-eq-250K_${i}.mdinfo
+	pmemd.cuda -O -i eq-310K.in -p SRSF1-SolvI_CMAP_${i}.prmtop -c SRSF1-eq-250K_${i}.rst -o eq-310K_${i}.out -r SRSF1-eq-310K_${i}.rst -x SRSF1-eq-310K_${i}.mdcrd -inf SRSF1-eq-310K_${i}.mdinfo
+	mkdir MD_${i}
+	cp md.in MD_${i}
+	cp md_${i}.job MD_${i}
+	cp SRSF1-eq-310K_${i}.rst MD_${i}
+	cp SRSF1-SolvI_CMAP_${i}.prmtop MD_${i}
+	cp SRSF1-SolvI_${i}.prmtop MD_${i}
+	cd MD_${i}
+	sbatch md_${i}.job
+	cd ../
+done

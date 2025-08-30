@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH --partition=express
+#SBATCH --job-name=SRSF1-Prot-Prep
+#SBATCH --error=SRSF1-Prot-Prep.err
+#SBATCH --output=SRSF1-Prot-Prep.out
+#SBATCH --ntasks=1
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=1024
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+
+cd MD_11
+sbatch ext2_11.job
+cd ../MD_12
+sbatch ext2_12.job
+cd ../MD_13
+sbatch ext2_13.job
+cd ../MD_14
+sbatch ext2_14.job
+cd ../MD_15
+sbatch ext2_15.job
+cd ../MD_16
+sbatch ext2_16.job
+cd ../MD_17
+sbatch ext2_17.job
+cd ../MD_18
+sbatch ext2_18.job
+cd ../MD_19
+sbatch ext2_19.job
+cd ../MD_20
+sbatch ext2_20.job

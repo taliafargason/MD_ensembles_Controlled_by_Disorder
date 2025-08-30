@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --partition=express
+#SBATCH --job-name=SRSF1-Prot-Prep
+#SBATCH --error=SRSF1-Prot-Prep.err
+#SBATCH --output=SRSF1-Prot-Prep.out
+#SBATCH --ntasks=1
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=1024
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+module purge
+module load DefaultModules
+module load Amber/20.11-foss-2020b-AmberTools-21.3
+
+
+tleap -f protein_ff14SB_TIP3P.leap.in > protein.leap.out

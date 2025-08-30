@@ -1,0 +1,215 @@
+source leaprc.protein.ff14SB
+source leaprc.phosaa14SB
+source leaprc.water.tip3p
+
+modified_SRSF1_1 = loadpdb modified_SRSF1_1-min.pdb
+solvateBox modified_SRSF1_1 TIP3PBOX 20.0
+addionsrand modified_SRSF1_1 Na+ 19
+charge modified_SRSF1_1
+check modified_SRSF1_1
+saveamberparm modified_SRSF1_1 SRSF1-SolvI_1.prmtop SRSF1-SolvI_1.inpcrd
+
+modified_SRSF1_2 = loadpdb modified_SRSF1_2-min.pdb
+solvateBox modified_SRSF1_2 TIP3PBOX 20.0
+addionsrand modified_SRSF1_2 Na+ 19
+charge modified_SRSF1_2
+check modified_SRSF1_2
+saveamberparm modified_SRSF1_2 SRSF1-SolvI_2.prmtop SRSF1-SolvI_2.inpcrd
+
+modified_SRSF1_3 = loadpdb modified_SRSF1_3-min.pdb
+solvateBox modified_SRSF1_3 TIP3PBOX 20.0
+addionsrand modified_SRSF1_3 Na+ 19
+charge modified_SRSF1_3
+check modified_SRSF1_3
+saveamberparm modified_SRSF1_3 SRSF1-SolvI_3.prmtop SRSF1-SolvI_3.inpcrd
+
+modified_SRSF1_4 = loadpdb modified_SRSF1_4-min.pdb
+solvateBox modified_SRSF1_4 TIP3PBOX 20.0
+addionsrand modified_SRSF1_4 Na+ 19
+charge modified_SRSF1_4
+check modified_SRSF1_4
+saveamberparm modified_SRSF1_4 SRSF1-SolvI_4.prmtop SRSF1-SolvI_4.inpcrd
+
+modified_SRSF1_5 = loadpdb modified_SRSF1_5-min.pdb
+solvateBox modified_SRSF1_5 TIP3PBOX 20.0
+addionsrand modified_SRSF1_5 Na+ 19
+charge modified_SRSF1_5
+check modified_SRSF1_5
+saveamberparm modified_SRSF1_5 SRSF1-SolvI_5.prmtop SRSF1-SolvI_5.inpcrd
+
+modified_SRSF1_6 = loadpdb modified_SRSF1_6-min.pdb
+solvateBox modified_SRSF1_6 TIP3PBOX 20.0
+addionsrand modified_SRSF1_6 Na+ 19
+charge modified_SRSF1_6
+check modified_SRSF1_6
+saveamberparm modified_SRSF1_6 SRSF1-SolvI_6.prmtop SRSF1-SolvI_6.inpcrd
+
+modified_SRSF1_7 = loadpdb modified_SRSF1_7-min.pdb
+solvateBox modified_SRSF1_7 TIP3PBOX 20.0
+addionsrand modified_SRSF1_7 Na+ 19
+charge modified_SRSF1_7
+check modified_SRSF1_7
+saveamberparm modified_SRSF1_7 SRSF1-SolvI_7.prmtop SRSF1-SolvI_7.inpcrd
+
+modified_SRSF1_8 = loadpdb modified_SRSF1_8-min.pdb
+solvateBox modified_SRSF1_8 TIP3PBOX 20.0
+addionsrand modified_SRSF1_8 Na+ 19
+charge modified_SRSF1_8
+check modified_SRSF1_8
+saveamberparm modified_SRSF1_8 SRSF1-SolvI_8.prmtop SRSF1-SolvI_8.inpcrd
+
+modified_SRSF1_9 = loadpdb modified_SRSF1_9-min.pdb
+solvateBox modified_SRSF1_9 TIP3PBOX 20.0
+addionsrand modified_SRSF1_9 Na+ 19
+charge modified_SRSF1_9
+check modified_SRSF1_9
+saveamberparm modified_SRSF1_9 SRSF1-SolvI_9.prmtop SRSF1-SolvI_9.inpcrd
+
+modified_SRSF1_10 = loadpdb modified_SRSF1_10-min.pdb
+solvateBox modified_SRSF1_10 TIP3PBOX 20.0
+addionsrand modified_SRSF1_10 Na+ 19
+charge modified_SRSF1_10
+check modified_SRSF1_10
+saveamberparm modified_SRSF1_10 SRSF1-SolvI_10.prmtop SRSF1-SolvI_10.inpcrd
+
+modified_SRSF1_11 = loadpdb modified_SRSF1_11-min.pdb
+solvateBox modified_SRSF1_11 TIP3PBOX 20.0
+addionsrand modified_SRSF1_11 Na+ 19
+charge modified_SRSF1_11
+check modified_SRSF1_11
+saveamberparm modified_SRSF1_11 SRSF1-SolvI_11.prmtop SRSF1-SolvI_11.inpcrd
+
+modified_SRSF1_12 = loadpdb modified_SRSF1_12-min.pdb
+solvateBox modified_SRSF1_12 TIP3PBOX 20.0
+addionsrand modified_SRSF1_12 Na+ 19
+charge modified_SRSF1_12
+check modified_SRSF1_12
+saveamberparm modified_SRSF1_12 SRSF1-SolvI_12.prmtop SRSF1-SolvI_12.inpcrd
+
+modified_SRSF1_13 = loadpdb modified_SRSF1_13-min.pdb
+solvateBox modified_SRSF1_13 TIP3PBOX 20.0
+addionsrand modified_SRSF1_13 Na+ 19
+charge modified_SRSF1_13
+check modified_SRSF1_13
+saveamberparm modified_SRSF1_13 SRSF1-SolvI_13.prmtop SRSF1-SolvI_13.inpcrd
+
+modified_SRSF1_14 = loadpdb modified_SRSF1_14-min.pdb
+solvateBox modified_SRSF1_14 TIP3PBOX 20.0
+addionsrand modified_SRSF1_14 Na+ 19
+charge modified_SRSF1_14
+check modified_SRSF1_14
+saveamberparm modified_SRSF1_14 SRSF1-SolvI_14.prmtop SRSF1-SolvI_14.inpcrd
+
+modified_SRSF1_15 = loadpdb modified_SRSF1_15-min.pdb
+solvateBox modified_SRSF1_15 TIP3PBOX 20.0
+addionsrand modified_SRSF1_15 Na+ 19
+charge modified_SRSF1_15
+check modified_SRSF1_15
+saveamberparm modified_SRSF1_15 SRSF1-SolvI_15.prmtop SRSF1-SolvI_15.inpcrd
+
+modified_SRSF1_16 = loadpdb modified_SRSF1_16-min.pdb
+solvateBox modified_SRSF1_16 TIP3PBOX 20.0
+addionsrand modified_SRSF1_16 Na+ 19
+charge modified_SRSF1_16
+check modified_SRSF1_16
+saveamberparm modified_SRSF1_16 SRSF1-SolvI_16.prmtop SRSF1-SolvI_16.inpcrd
+
+modified_SRSF1_17 = loadpdb modified_SRSF1_17-min.pdb
+solvateBox modified_SRSF1_17 TIP3PBOX 20.0
+addionsrand modified_SRSF1_17 Na+ 19
+charge modified_SRSF1_17
+check modified_SRSF1_17
+saveamberparm modified_SRSF1_17 SRSF1-SolvI_17.prmtop SRSF1-SolvI_17.inpcrd
+
+modified_SRSF1_18 = loadpdb modified_SRSF1_18-min.pdb
+solvateBox modified_SRSF1_18 TIP3PBOX 20.0
+addionsrand modified_SRSF1_18 Na+ 19
+charge modified_SRSF1_18
+check modified_SRSF1_18
+saveamberparm modified_SRSF1_18 SRSF1-SolvI_18.prmtop SRSF1-SolvI_18.inpcrd
+
+modified_SRSF1_19 = loadpdb modified_SRSF1_19-min.pdb
+solvateBox modified_SRSF1_19 TIP3PBOX 20.0
+addionsrand modified_SRSF1_19 Na+ 19
+charge modified_SRSF1_19
+check modified_SRSF1_19
+saveamberparm modified_SRSF1_19 SRSF1-SolvI_19.prmtop SRSF1-SolvI_19.inpcrd
+
+modified_SRSF1_20 = loadpdb modified_SRSF1_20-min.pdb
+solvateBox modified_SRSF1_20 TIP3PBOX 20.0
+addionsrand modified_SRSF1_20 Na+ 19
+charge modified_SRSF1_20
+check modified_SRSF1_20
+saveamberparm modified_SRSF1_20 SRSF1-SolvI_20.prmtop SRSF1-SolvI_20.inpcrd
+
+modified_SRSF1_21 = loadpdb modified_SRSF1_21-min.pdb
+solvateBox modified_SRSF1_21 TIP3PBOX 20.0
+addionsrand modified_SRSF1_21 Na+ 19
+charge modified_SRSF1_21
+check modified_SRSF1_21
+saveamberparm modified_SRSF1_21 SRSF1-SolvI_21.prmtop SRSF1-SolvI_21.inpcrd
+
+modified_SRSF1_22 = loadpdb modified_SRSF1_22-min.pdb
+solvateBox modified_SRSF1_22 TIP3PBOX 20.0
+addionsrand modified_SRSF1_22 Na+ 19
+charge modified_SRSF1_22
+check modified_SRSF1_22
+saveamberparm modified_SRSF1_22 SRSF1-SolvI_22.prmtop SRSF1-SolvI_22.inpcrd
+
+modified_SRSF1_23 = loadpdb modified_SRSF1_23-min.pdb
+solvateBox modified_SRSF1_23 TIP3PBOX 20.0
+addionsrand modified_SRSF1_23 Na+ 19
+charge modified_SRSF1_23
+check modified_SRSF1_23
+saveamberparm modified_SRSF1_23 SRSF1-SolvI_23.prmtop SRSF1-SolvI_23.inpcrd
+
+modified_SRSF1_24 = loadpdb modified_SRSF1_24-min.pdb
+solvateBox modified_SRSF1_24 TIP3PBOX 20.0
+addionsrand modified_SRSF1_24 Na+ 19
+charge modified_SRSF1_24
+check modified_SRSF1_24
+saveamberparm modified_SRSF1_24 SRSF1-SolvI_24.prmtop SRSF1-SolvI_24.inpcrd
+
+modified_SRSF1_25 = loadpdb modified_SRSF1_25-min.pdb
+solvateBox modified_SRSF1_25 TIP3PBOX 20.0
+addionsrand modified_SRSF1_25 Na+ 19
+charge modified_SRSF1_25
+check modified_SRSF1_25
+saveamberparm modified_SRSF1_25 SRSF1-SolvI_25.prmtop SRSF1-SolvI_25.inpcrd
+
+modified_SRSF1_26 = loadpdb modified_SRSF1_26-min.pdb
+solvateBox modified_SRSF1_26 TIP3PBOX 20.0
+addionsrand modified_SRSF1_26 Na+ 19
+charge modified_SRSF1_26
+check modified_SRSF1_26
+saveamberparm modified_SRSF1_26 SRSF1-SolvI_26.prmtop SRSF1-SolvI_26.inpcrd
+
+modified_SRSF1_27 = loadpdb modified_SRSF1_27-min.pdb
+solvateBox modified_SRSF1_27 TIP3PBOX 20.0
+addionsrand modified_SRSF1_27 Na+ 19
+charge modified_SRSF1_27
+check modified_SRSF1_27
+saveamberparm modified_SRSF1_27 SRSF1-SolvI_27.prmtop SRSF1-SolvI_27.inpcrd
+
+modified_SRSF1_28 = loadpdb modified_SRSF1_28-min.pdb
+solvateBox modified_SRSF1_28 TIP3PBOX 20.0
+addionsrand modified_SRSF1_28 Na+ 19
+charge modified_SRSF1_28
+check modified_SRSF1_28
+saveamberparm modified_SRSF1_28 SRSF1-SolvI_28.prmtop SRSF1-SolvI_28.inpcrd
+
+modified_SRSF1_29 = loadpdb modified_SRSF1_29-min.pdb
+solvateBox modified_SRSF1_29 TIP3PBOX 20.0
+addionsrand modified_SRSF1_29 Na+ 19
+charge modified_SRSF1_29
+check modified_SRSF1_29
+saveamberparm modified_SRSF1_29 SRSF1-SolvI_29.prmtop SRSF1-SolvI_29.inpcrd
+
+modified_SRSF1_30 = loadpdb modified_SRSF1_30-min.pdb
+solvateBox modified_SRSF1_30 TIP3PBOX 20.0
+addionsrand modified_SRSF1_30 Na+ 19
+charge modified_SRSF1_30
+check modified_SRSF1_30
+saveamberparm modified_SRSF1_30 SRSF1-SolvI_30.prmtop SRSF1-SolvI_30.inpcrd
+
+quit

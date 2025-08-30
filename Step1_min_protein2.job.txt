@@ -1,0 +1,76 @@
+#!/bin/bash
+#SBATCH --partition=express
+#SBATCH --job-name=SRSF1-Prot-Min
+#SBATCH --error=SRSF1-Prot-Min.err
+#SBATCH --output=SRSF1-Prot-Min.out
+#SBATCH --ntasks=1
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=1024
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=tfarg@uab.edu
+
+module purge
+module load DefaultModules
+module load Amber/20.11-foss-2020b-AmberTools-21.3
+
+sander -O -i min-protein.in -p SRSF1_CMAP_1.prmtop -c SRSF1_1.inpcrd -ref SRSF1_1.inpcrd -o min-protein_1.out -r SRSF1-min_1.inpcrd -x SRSF1-min_1.mdcrd -inf SRSF1-min_1.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_2.prmtop -c SRSF1_2.inpcrd -ref SRSF1_2.inpcrd -o min-protein_2.out -r SRSF1-min_2.inpcrd -x SRSF1-min_2.mdcrd -inf SRSF1-min_2.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_3.prmtop -c SRSF1_3.inpcrd -ref SRSF1_3.inpcrd -o min-protein_3.out -r SRSF1-min_3.inpcrd -x SRSF1-min_3.mdcrd -inf SRSF1-min_3.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_4.prmtop -c SRSF1_4.inpcrd -ref SRSF1_4.inpcrd -o min-protein_4.out -r SRSF1-min_4.inpcrd -x SRSF1-min_4.mdcrd -inf SRSF1-min_4.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_5.prmtop -c SRSF1_5.inpcrd -ref SRSF1_5.inpcrd -o min-protein_5.out -r SRSF1-min_5.inpcrd -x SRSF1-min_5.mdcrd -inf SRSF1-min_5.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_6.prmtop -c SRSF1_6.inpcrd -ref SRSF1_6.inpcrd -o min-protein_6.out -r SRSF1-min_6.inpcrd -x SRSF1-min_6.mdcrd -inf SRSF1-min_6.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_7.prmtop -c SRSF1_7.inpcrd -ref SRSF1_7.inpcrd -o min-protein_7.out -r SRSF1-min_7.inpcrd -x SRSF1-min_7.mdcrd -inf SRSF1-min_7.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_8.prmtop -c SRSF1_8.inpcrd -ref SRSF1_8.inpcrd -o min-protein_8.out -r SRSF1-min_8.inpcrd -x SRSF1-min_8.mdcrd -inf SRSF1-min_8.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_9.prmtop -c SRSF1_9.inpcrd -ref SRSF1_9.inpcrd -o min-protein_9.out -r SRSF1-min_9.inpcrd -x SRSF1-min_9.mdcrd -inf SRSF1-min_9.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_10.prmtop -c SRSF1_10.inpcrd -ref SRSF1_10.inpcrd -o min-protein_10.out -r SRSF1-min_10.inpcrd -x SRSF1-min_10.mdcrd -inf SRSF1-min_10.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_11.prmtop -c SRSF1_11.inpcrd -ref SRSF1_11.inpcrd -o min-protein_11.out -r SRSF1-min_11.inpcrd -x SRSF1-min_11.mdcrd -inf SRSF1-min_11.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_12.prmtop -c SRSF1_12.inpcrd -ref SRSF1_12.inpcrd -o min-protein_12.out -r SRSF1-min_12.inpcrd -x SRSF1-min_12.mdcrd -inf SRSF1-min_12.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_13.prmtop -c SRSF1_13.inpcrd -ref SRSF1_13.inpcrd -o min-protein_13.out -r SRSF1-min_13.inpcrd -x SRSF1-min_13.mdcrd -inf SRSF1-min_13.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_14.prmtop -c SRSF1_14.inpcrd -ref SRSF1_14.inpcrd -o min-protein_14.out -r SRSF1-min_14.inpcrd -x SRSF1-min_14.mdcrd -inf SRSF1-min_14.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_15.prmtop -c SRSF1_15.inpcrd -ref SRSF1_15.inpcrd -o min-protein_15.out -r SRSF1-min_15.inpcrd -x SRSF1-min_15.mdcrd -inf SRSF1-min_15.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_16.prmtop -c SRSF1_16.inpcrd -ref SRSF1_16.inpcrd -o min-protein_16.out -r SRSF1-min_16.inpcrd -x SRSF1-min_16.mdcrd -inf SRSF1-min_16.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_17.prmtop -c SRSF1_17.inpcrd -ref SRSF1_17.inpcrd -o min-protein_17.out -r SRSF1-min_17.inpcrd -x SRSF1-min_17.mdcrd -inf SRSF1-min_17.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_18.prmtop -c SRSF1_18.inpcrd -ref SRSF1_18.inpcrd -o min-protein_18.out -r SRSF1-min_18.inpcrd -x SRSF1-min_18.mdcrd -inf SRSF1-min_18.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_19.prmtop -c SRSF1_19.inpcrd -ref SRSF1_19.inpcrd -o min-protein_19.out -r SRSF1-min_19.inpcrd -x SRSF1-min_19.mdcrd -inf SRSF1-min_19.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_20.prmtop -c SRSF1_20.inpcrd -ref SRSF1_20.inpcrd -o min-protein_20.out -r SRSF1-min_20.inpcrd -x SRSF1-min_20.mdcrd -inf SRSF1-min_20.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_21.prmtop -c SRSF1_21.inpcrd -ref SRSF1_21.inpcrd -o min-protein_21.out -r SRSF1-min_21.inpcrd -x SRSF1-min_21.mdcrd -inf SRSF1-min_21.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_22.prmtop -c SRSF1_22.inpcrd -ref SRSF1_22.inpcrd -o min-protein_22.out -r SRSF1-min_22.inpcrd -x SRSF1-min_22.mdcrd -inf SRSF1-min_22.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_23.prmtop -c SRSF1_23.inpcrd -ref SRSF1_23.inpcrd -o min-protein_23.out -r SRSF1-min_23.inpcrd -x SRSF1-min_23.mdcrd -inf SRSF1-min_23.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_24.prmtop -c SRSF1_24.inpcrd -ref SRSF1_24.inpcrd -o min-protein_24.out -r SRSF1-min_24.inpcrd -x SRSF1-min_24.mdcrd -inf SRSF1-min_24.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_25.prmtop -c SRSF1_25.inpcrd -ref SRSF1_25.inpcrd -o min-protein_25.out -r SRSF1-min_25.inpcrd -x SRSF1-min_25.mdcrd -inf SRSF1-min_25.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_26.prmtop -c SRSF1_26.inpcrd -ref SRSF1_26.inpcrd -o min-protein_26.out -r SRSF1-min_26.inpcrd -x SRSF1-min_26.mdcrd -inf SRSF1-min_26.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_27.prmtop -c SRSF1_27.inpcrd -ref SRSF1_27.inpcrd -o min-protein_27.out -r SRSF1-min_27.inpcrd -x SRSF1-min_27.mdcrd -inf SRSF1-min_27.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_28.prmtop -c SRSF1_28.inpcrd -ref SRSF1_28.inpcrd -o min-protein_28.out -r SRSF1-min_28.inpcrd -x SRSF1-min_28.mdcrd -inf SRSF1-min_28.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_29.prmtop -c SRSF1_29.inpcrd -ref SRSF1_29.inpcrd -o min-protein_29.out -r SRSF1-min_29.inpcrd -x SRSF1-min_29.mdcrd -inf SRSF1-min_29.mdinfo
+sander -O -i min-protein.in -p SRSF1_CMAP_30.prmtop -c SRSF1_30.inpcrd -ref SRSF1_30.inpcrd -o min-protein_30.out -r SRSF1-min_30.inpcrd -x SRSF1-min_30.mdcrd -inf SRSF1-min_30.mdinfo
+
+ambpdb -p SRSF1_1.prmtop -c SRSF1-min_1.inpcrd > SRSF1_1-min.pdb
+ambpdb -p SRSF1_2.prmtop -c SRSF1-min_2.inpcrd > SRSF1_2-min.pdb
+ambpdb -p SRSF1_3.prmtop -c SRSF1-min_3.inpcrd > SRSF1_3-min.pdb
+ambpdb -p SRSF1_4.prmtop -c SRSF1-min_4.inpcrd > SRSF1_4-min.pdb
+ambpdb -p SRSF1_5.prmtop -c SRSF1-min_5.inpcrd > SRSF1_5-min.pdb
+ambpdb -p SRSF1_6.prmtop -c SRSF1-min_6.inpcrd > SRSF1_6-min.pdb
+ambpdb -p SRSF1_7.prmtop -c SRSF1-min_7.inpcrd > SRSF1_7-min.pdb
+ambpdb -p SRSF1_8.prmtop -c SRSF1-min_8.inpcrd > SRSF1_8-min.pdb
+ambpdb -p SRSF1_9.prmtop -c SRSF1-min_9.inpcrd > SRSF1_9-min.pdb
+ambpdb -p SRSF1_10.prmtop -c SRSF1-min_10.inpcrd > SRSF1_10-min.pdb
+ambpdb -p SRSF1_11.prmtop -c SRSF1-min_11.inpcrd > SRSF1_11-min.pdb
+ambpdb -p SRSF1_12.prmtop -c SRSF1-min_12.inpcrd > SRSF1_12-min.pdb
+ambpdb -p SRSF1_13.prmtop -c SRSF1-min_13.inpcrd > SRSF1_13-min.pdb
+ambpdb -p SRSF1_14.prmtop -c SRSF1-min_14.inpcrd > SRSF1_14-min.pdb
+ambpdb -p SRSF1_15.prmtop -c SRSF1-min_15.inpcrd > SRSF1_15-min.pdb
+ambpdb -p SRSF1_16.prmtop -c SRSF1-min_16.inpcrd > SRSF1_16-min.pdb
+ambpdb -p SRSF1_17.prmtop -c SRSF1-min_17.inpcrd > SRSF1_17-min.pdb
+ambpdb -p SRSF1_18.prmtop -c SRSF1-min_18.inpcrd > SRSF1_18-min.pdb
+ambpdb -p SRSF1_19.prmtop -c SRSF1-min_19.inpcrd > SRSF1_19-min.pdb
+ambpdb -p SRSF1_20.prmtop -c SRSF1-min_20.inpcrd > SRSF1_20-min.pdb
+ambpdb -p SRSF1_21.prmtop -c SRSF1-min_21.inpcrd > SRSF1_21-min.pdb
+ambpdb -p SRSF1_22.prmtop -c SRSF1-min_22.inpcrd > SRSF1_22-min.pdb
+ambpdb -p SRSF1_23.prmtop -c SRSF1-min_23.inpcrd > SRSF1_23-min.pdb
+ambpdb -p SRSF1_24.prmtop -c SRSF1-min_24.inpcrd > SRSF1_24-min.pdb
+ambpdb -p SRSF1_25.prmtop -c SRSF1-min_25.inpcrd > SRSF1_25-min.pdb
+ambpdb -p SRSF1_26.prmtop -c SRSF1-min_26.inpcrd > SRSF1_26-min.pdb
+ambpdb -p SRSF1_27.prmtop -c SRSF1-min_27.inpcrd > SRSF1_27-min.pdb
+ambpdb -p SRSF1_28.prmtop -c SRSF1-min_28.inpcrd > SRSF1_28-min.pdb
+ambpdb -p SRSF1_29.prmtop -c SRSF1-min_29.inpcrd > SRSF1_29-min.pdb
+ambpdb -p SRSF1_30.prmtop -c SRSF1-min_30.inpcrd > SRSF1_30-min.pdb

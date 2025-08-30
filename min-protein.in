@@ -1,0 +1,9 @@
+JOB: Initial Minimization of Protein
+ &cntrl
+  imin = 1,
+  maxcyc = 10000,
+  ncyc = 500, dx0 = 0.005,
+  ntf = 1, ntb = 0,
+  cut = 10.0, nsnb = 20,
+  ntr = 0,
+ &end
